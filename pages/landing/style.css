@@ -1,0 +1,105 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  max-width: 1160px;
+  width: 100%;
+}
+
+.btn {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  padding: 15px 60px;
+  background-color: #70CB0E;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+header {
+  width: 100%;
+  min-height: 700px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: radial-gradient(71.89% 152.21% at 40.1% 50%, #B5E6FF 0%, #59C3FB 100%);
+}
+
+header .container.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 12px 0;
+}
+
+header .container.menu .left {
+  width: 50%;
+  height: 58px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  list-style-type: none;
+}
+
+header .container.menu .left .nav {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style-type: none;
+  padding: 0;
+}
+
+header .container.menu .left .nav .nav-link {
+  color: #212121;
+  font-size: 18px;
+  line-height: 21;
+  font-weight: 500;
+  text-decoration: none;
+  -webkit-transition: .2s all;
+  transition: .2s all;
+}
+
+header .container.menu .left .nav .nav-link.active {
+  text-shadow: -1px -1px 0 #70CB0E, 1px 1px 0 #70CB0E;
+}
+
+header .container.menu .left .nav .nav-link:hover {
+  color: #70CB0E;
+}
+
+header .container.panda {
+  background-image: url("../../assets/images/panda.png");
+  background-repeat: no-repeat;
+  background-position: right center;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin-top: -30px;
+}
+
+header .container.panda h1 {
+  width: 570px;
+  margin-top: 150px;
+  font-size: 70px;
+  font-weight: 900;
+  line-height: 84px;
+}
+/*# sourceMappingURL=style.css.map */
