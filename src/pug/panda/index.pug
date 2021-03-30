@@ -1,0 +1,14 @@
+extends ../templates/zoo.pug
+include ../components/info2/info2.pug
+
+block title
+  | Panda
+
+block pageTitle
+  | Panda
+
+block content
+  +info2({
+    zoo: "The Shenshuping Gengda Panda Center (Sichuan, China)",
+    type: "Imitation of the natural environment"
+  })

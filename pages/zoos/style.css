@@ -1,0 +1,102 @@
+body {
+  font-family: 'Roboto', sans-serif; }
+
+h1 {
+  font-size: 48px; }
+
+.container {
+  max-width: 1160px;
+  width: 100%;
+  margin: 0 auto; }
+
+section {
+  padding: 100px 0;
+  display: flex;
+  justify-content: center;
+  text-align: center; }
+  section h2 {
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 47px;
+    letter-spacing: 0em; }
+
+.btn {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  padding: 15px 60px;
+  background-color: #70CB0E;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  cursor: pointer; }
+
+footer {
+  height: 270px;
+  width: 100%;
+  position: relative;
+  background-color: #DFF5B0;
+  margin-top: 40px; }
+  footer .bg {
+    height: 100%;
+    width: 100%;
+    top: -70px;
+    left: 0;
+    position: absolute;
+    background-image: url("./../../assets/images/bg-footer.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    z-index: -1; }
+
+header {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #FFFFFF; }
+  header .container.menu {
+    display: flex;
+    margin: 12px 0; }
+    header .container.menu .left {
+      width: 50%;
+      height: 58px;
+      display: flex;
+      justify-content: space-around;
+      list-style-type: none; }
+      header .container.menu .left .nav {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        list-style-type: none;
+        padding: 0; }
+        header .container.menu .left .nav .nav-link {
+          color: #212121;
+          font-size: 18px;
+          line-height: 21;
+          font-weight: 500;
+          text-decoration: none;
+          transition: .2s all; }
+          header .container.menu .left .nav .nav-link.active {
+            text-shadow: -1px -1px 0 #70CB0E, 1px 1px 0 #70CB0E; }
+          header .container.menu .left .nav .nav-link:hover {
+            color: #70CB0E; }
+
+/* /header */
+
+.info2 {
+  display: flex;
+  background: #A7E1FF;
+  width: 100%;
+  min-height: 60px; }
+  .info2 .left,
+  .info2 .right {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    padding: 20px; }
+  .info2 .title {
+    text-transform: uppercase;
+    margin-right: 5px; }

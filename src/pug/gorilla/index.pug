@@ -1,0 +1,14 @@
+extends ../templates/zoo.pug
+include ../components/info2/info2.pug
+
+block title
+  | Gorilla
+
+block pageTitle
+  | Gorilla
+
+block content
+  +info2({
+    zoo: "GRACE Center (Kasugho, Eastern DRC)",
+    type: "Imitation of the natural environment"
+  })

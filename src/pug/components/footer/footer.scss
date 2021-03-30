@@ -1,0 +1,28 @@
+$st1: #70CB0E;
+$st2: #212121;
+$st3: #FFFFFF;
+$st4: #DFF5B0;
+$st5: #FFE68E;
+$st6: #9CA498;
+$st7: #A7E1FF;
+
+footer {
+  height: 270px;
+  width: 100%;
+  position: relative;
+  background-color: $st4;
+  margin-top: 40px;
+
+  .bg {
+    height: 100%;
+    width: 100%;
+    top: -70px;
+    left: 0;
+    position: absolute;
+    background-image: url('./../../assets/images/bg-footer.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    z-index: -1;
+  }
+}
