@@ -121,6 +121,7 @@ header .container.panda h1 {
   line-height: 84px;
 }
 
+/* /header */
 .how .photo {
   height: 555px;
   position: relative;
@@ -218,5 +219,32 @@ header .container.panda h1 {
 
 .how .text p {
   margin: 0;
+}
+
+.pets .slider .item {
+  width: 233px;
+  height: 300px;
+}
+
+/* /.pets */
+/* /.pay */
+/* /.testimonials */
+footer {
+  height: 270px;
+  width: 100%;
+  position: relative;
+  background-color: #DFF5B0;
+}
+
+footer .bg {
+  height: 100%;
+  width: 100%;
+  top: -70px;
+  left: 0;
+  position: absolute;
+  background-image: url("./../../assets/images/bg-footer.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 /*# sourceMappingURL=style.css.map */

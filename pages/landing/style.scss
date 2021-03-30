@@ -105,6 +105,7 @@ header {
     }
   }
 }
+/* /header */
 
 
 .how {
@@ -195,5 +196,48 @@ header {
     p {
       margin: 0;
     }
+  }
+}
+
+
+.pets {
+  .slider {
+    .item {
+      width: 233px;
+      height: 300px;
+    }
+  }  
+}
+/* /.pets */
+
+
+// .pay {
+
+// }
+/* /.pay */
+
+
+// .testimonials {
+
+// }
+/* /.testimonials */
+
+
+footer {
+  height: 270px;
+  width: 100%;
+  position: relative;
+  background-color: $st4;
+
+  .bg {
+    height: 100%;
+    width: 100%;
+    top: -70px;
+    left: 0;
+    position: absolute;
+    background-image: url('./../../assets/images/bg-footer.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
   }
 }
