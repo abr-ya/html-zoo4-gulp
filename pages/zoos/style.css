@@ -12,7 +12,9 @@ h1 {
 section {
   display: flex;
   justify-content: center;
-  text-align: center; }
+  text-align: center;
+  margin-top: 70px;
+  margin-bottom: 70px; }
 
 .information .bottom {
   display: flex;
@@ -150,16 +152,20 @@ header {
   justify-content: space-between;
   background: #A7E1FF;
   width: calc(100% - 40px);
-  min-height: 60px;
+  height: auto;
+  max-height: 20px;
   margin-top: 20px;
   margin-bottom: 20px;
   padding: 20px;
+  transition: all 1s;
   text-align: left; }
   .info .left {
     width: calc(100% - 85px); }
   .info .right {
     display: flex;
-    align-items: center; }
+    align-items: center;
+    margin-top: -12px;
+    margin-bottom: -12px; }
     .info .right .arrow {
       background-color: #FFE68E;
       background-image: url(../../../../assets/images/arrow-next.svg);
@@ -170,10 +176,21 @@ header {
       border-radius: 50%;
       border: none;
       outline: none;
-      transform: rotate(90deg);
+      transform: rotate(270deg);
+      transition: 1s all;
       cursor: pointer; }
   .info .title {
     text-transform: uppercase; }
+  .info .text {
+    margin-bottom: 0;
+    opacity: 0;
+    transition: all 1s; }
+  .info.open {
+    max-height: 200px; }
+    .info.open .text {
+      opacity: 1; }
+    .info.open .arrow {
+      transform: rotate(90deg); }
 
 .info2 {
   display: flex;

@@ -109,6 +109,10 @@ header {
 
 
 .how {
+  .container {
+    max-width: 1370px;
+  }
+
   .photo {
     height: 555px;
     position: relative;
@@ -141,6 +145,7 @@ header {
       height: 100%;
       width: 100%;
       position: relative;
+      list-style-type: none;
 
       .slot {
         position: absolute;

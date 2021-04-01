@@ -75,6 +75,9 @@ header {
       line-height: 84px; }
 
 /* /header */
+.how .container {
+  max-width: 1370px; }
+
 .how .photo {
   height: 555px;
   position: relative; }
@@ -101,7 +104,8 @@ header {
   .how .photo .slider {
     height: 100%;
     width: 100%;
-    position: relative; }
+    position: relative;
+    list-style-type: none; }
     .how .photo .slider .slot {
       position: absolute;
       border: 1px solid #FFFFFF; }

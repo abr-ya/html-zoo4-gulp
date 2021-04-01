@@ -6,10 +6,12 @@ $st7: #A7E1FF;
   justify-content: space-between;
   background: $st7;
   width: calc(100% - 40px);
-  min-height: 60px;
+  height: auto;
+  max-height: 20px;
   margin-top: 20px;
   margin-bottom: 20px;
   padding: 20px;
+  transition: all 1s;
   text-align: left;
 
   .left {
@@ -19,6 +21,8 @@ $st7: #A7E1FF;
   .right {
     display: flex;
     align-items: center;
+    margin-top: -12px;
+    margin-bottom: -12px;
 
     .arrow {
       background-color: $st5;
@@ -30,12 +34,31 @@ $st7: #A7E1FF;
       border-radius: 50%;
       border: none;
       outline: none;
-      transform: rotate(90deg);
+      transform: rotate(270deg);
+      transition: 1s all;
       cursor: pointer;
     }
   }
 
   .title {
     text-transform: uppercase;
+  }
+
+  .text {
+    margin-bottom: 0;
+    opacity: 0;
+    transition: all 1s;
+  }
+
+  &.open {
+    max-height: 200px;
+
+    .text {
+      opacity: 1;
+    }
+    
+    .arrow {
+      transform: rotate(90deg);
+    }
   }
 }

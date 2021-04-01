@@ -48,6 +48,17 @@ gulp.task('sass-zoo', () => {
     .pipe(browserSync.stream())
 });
 
+gulp.task('js-zoo', () => {
+  return gulp.src('src/pug/**/*.js')
+    // .pipe(babel({
+    //   presets: ['@babel/env']
+    // }))
+    // .pipe(uglify()) // min
+    .pipe(concat('script.js'))
+    .pipe(gulp.dest('pages/zoos/'))
+    .pipe(browserSync.stream())
+});
+
 // при изменении компонента, шаблона или scss в папке
 const pugWatch = [
   'src/pug/components/**/*.*',
@@ -61,7 +72,7 @@ gulp.task('default', () => {
     port: 3010
   });
   gulp.watch([...pugWatch, 'src/pug/panda/index.pug'], gulp.series('pug-panda'));
-  gulp.watch([...pugWatch, 'src/pug/gorilla/index.pug'], gulp.series(['pug-gorilla', 'sass-zoo']));
+  gulp.watch([...pugWatch, 'src/pug/gorilla/index.pug'], gulp.series(['pug-gorilla', 'sass-zoo', 'js-zoo']));
   gulp.watch('src/scss/landing.scss', gulp.series('sass-landing'));
   gulp.watch('src/scss/map.scss', gulp.series('sass-map'));
   gulp.watch('**/*.html').on('change', browserSync.reload);
