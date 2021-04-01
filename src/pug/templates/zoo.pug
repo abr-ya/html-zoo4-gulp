@@ -15,10 +15,23 @@ html
     
       include ../components/header/header.pug
       
-      .container.content
+      .container
         h1
           block pageTitle
-        block content
+
+      section.video
+        .container
+          block video
+
+      section.information
+        .container
+          .top
+            block infoTop
+          .bottom
+            .col
+              block infoLeft
+            .col
+              block infoRight
 
       include ../components/footer/footer.pug    
   

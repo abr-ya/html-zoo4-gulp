@@ -10,15 +10,15 @@ h1 {
   margin: 0 auto; }
 
 section {
-  padding: 100px 0;
   display: flex;
   justify-content: center;
   text-align: center; }
-  section h2 {
-    font-size: 40px;
-    font-weight: 500;
-    line-height: 47px;
-    letter-spacing: 0em; }
+
+.information .bottom {
+  display: flex;
+  justify-content: space-between; }
+  .information .bottom .col {
+    width: calc(50% - 10px); }
 
 footer {
   height: 270px;
@@ -144,6 +144,36 @@ header {
             color: #70CB0E; }
 
 /* /header */
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  background: #A7E1FF;
+  width: calc(100% - 40px);
+  min-height: 60px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+  text-align: left; }
+  .info .left {
+    width: calc(100% - 85px); }
+  .info .right {
+    display: flex;
+    align-items: center; }
+    .info .right .arrow {
+      background-color: #FFE68E;
+      background-image: url(../../../../assets/images/arrow-next.svg);
+      background-repeat: no-repeat;
+      background-position: 18px center;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      border: none;
+      outline: none;
+      transform: rotate(90deg);
+      cursor: pointer; }
+  .info .title {
+    text-transform: uppercase; }
 
 .info2 {
   display: flex;

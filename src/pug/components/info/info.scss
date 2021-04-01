@@ -1,0 +1,41 @@
+$st5: #FFE68E;
+$st7: #A7E1FF;
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  background: $st7;
+  width: calc(100% - 40px);
+  min-height: 60px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+  text-align: left;
+
+  .left {
+    width: calc(100% - 85px);
+  }
+
+  .right {
+    display: flex;
+    align-items: center;
+
+    .arrow {
+      background-color: $st5;
+      background-image: url(../../../../assets/images/arrow-next.svg);
+      background-repeat: no-repeat;
+      background-position: 18px center;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      border: none;
+      outline: none;
+      transform: rotate(90deg);
+      cursor: pointer;
+    }
+  }
+
+  .title {
+    text-transform: uppercase;
+  }
+}

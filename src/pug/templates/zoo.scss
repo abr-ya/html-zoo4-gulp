@@ -21,15 +21,23 @@ h1 {
 }
 
 section {
-  padding: 100px 0;
   display: flex;
   justify-content: center;
   text-align: center;
-
-  h2 {
-    font-size: 40px;
-    font-weight: 500;
-    line-height: 47px;
-    letter-spacing: 0em;
-  }
 }
+
+// .video {
+
+// }
+
+  .information {
+
+    .bottom {
+      display: flex;
+      justify-content: space-between;
+
+      .col {
+        width: calc(50% - 10px);
+      }      
+    }
+  }
