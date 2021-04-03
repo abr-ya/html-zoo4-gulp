@@ -1,5 +1,7 @@
 include ../components/arrow/arrow.pug
+include ../components/btn-green/btn-green.pug
 include ../components/card-animal/card-animal.pug
+include ../components/card-comment/card-comment.pug
 
 doctype html
 html
@@ -31,7 +33,7 @@ html
       </div>
       <div class="container panda">
         <h1>Watch your favorite animal ONLINE</h1>
-        <button class="btn">Play</button>
+        +btnGreen({text: 'Play', h: 50, w: 233})
       </div>
     </header>
 
@@ -101,6 +103,40 @@ html
       <section class="testimonials">
         <div class="container">
           <h2>Testimonials</h2>
+          .wrapper
+            .left
+              +arrow({dir: 'left'})
+            .item
+              +cardComment({
+                fileName: 'Karen',
+                title: 'Karen Maitland',
+                coin: 10,
+                text: '"Thank you so much for these wonderful live webcams of the eagles on Catalina Island. Being able to watch them in their natural habitat as opposed to zoos is so wonderful. I cannot see myself ever being able to come up there to see them in person, so this is a great substitute. Thank you again."',
+              })
+            .item
+              +cardComment({
+                fileName: 'Sara',
+                title: 'Sara Jones',
+                coin: 13,
+                text: '"A disability prevents me from enjoying the outdoors and travel like I used to do. I really enjoy all the live cams and can spend HOURS watching real-time entertainment. Wild life style!"',
+              })              
+            .item
+              +cardComment({
+                fileName: 'Alex',
+                title: 'Alex Barden',
+                coin: 7,
+                text: '"Here\'s a huge "thank-you" from New Hampshire - you allow me to travel the world without ever leaving the comfort of my office chair. Jammies on and coffee cup in hand, I am Phineas Fogg!!"',
+              })
+            .item
+              +cardComment({
+                fileName: 'Alene',
+                title: 'Alene Ray',
+                coin: 18,
+                text: '"Thank you for all the knowledge, education, pleasure and happiness you have add to all our lives at no expense on our part. My humble thanks and gratitude are being wished for all of you. I want to thank you and feed the animals a small reward"',
+              })
+            .right
+              +arrow({dir: 'right'})
+          +btnGreen({text: 'Leave feedback', h: 50, w: 246})
         </div>
       </section>
     </main>

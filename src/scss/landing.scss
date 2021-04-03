@@ -30,17 +30,6 @@ section {
   }
 }
 
-.btn {
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 21px;
-  background-color: $st1;
-  border-radius: 30px;
-  border: none;
-  outline: none;
-  cursor: pointer;
-}
-
 
 header {
   width: 100%;
@@ -102,11 +91,6 @@ header {
       font-size: 70px;
       font-weight: 900;
       line-height: 84px;
-    }
-
-    .btn {
-      width: 230px;
-      height: 50px;
     }
   }
 }
@@ -178,7 +162,6 @@ header {
         width: 300px;
         height: 400px;
         top: calc(50% - 400px/2);
-        background-color: #70CB0E;
         z-index: 5;
       }
 
@@ -190,7 +173,6 @@ header {
         height: 450px;
         left: calc(50% - 350px/2);
         top: calc(50% - 450px/2);
-        background-color: aqua;
         z-index: 10;
       }
     }
@@ -268,27 +250,14 @@ header {
 /* /.pay */
 
 
-// .testimonials {
-
-// }
-/* /.testimonials */
-
-
-footer {
-  height: 270px;
-  width: 100%;
-  position: relative;
-  background-color: $st4;
-
-  .bg {
-    height: 100%;
-    width: 100%;
-    top: -70px;
-    left: 0;
-    position: absolute;
-    background-image: url('./../../assets/images/bg-footer.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
+.testimonials {
+  .left, .right {
+    display: flex;
+    align-items: center;
   }
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+  }  
 }
+/* /.testimonials */

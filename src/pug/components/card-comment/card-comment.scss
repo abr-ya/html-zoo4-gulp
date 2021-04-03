@@ -1,0 +1,68 @@
+$st3: #FFFFFF;
+$st2: #212121;
+$st7: #A7E1FF;
+
+.cardComment {
+  width: calc(233px - 40px);
+  height: calc(369px - 40px);
+  background-color: $st7;
+  padding: 20px;
+
+  .cardComment__top {
+    display: flex;
+
+    img {
+      height: 52px;
+      width: 52px;
+      margin-right: 10px;
+    }
+
+    .title {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+  
+      h4 {
+        color: $st2;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19.2px;
+        margin: 0;
+      }
+
+      .coin {
+        display: flex;
+        align-items: center;
+        margin-top: 4px;
+
+        .logo {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 12px;
+          width: 12px;
+          background-color: #FFB600;
+          border-radius: 50%;
+          margin-right: 3px;
+        }
+
+        .text {
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 14.4px;
+        }
+      }
+    }
+  }
+
+  .cardComment__bottom {
+    p {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+      text-align: left;
+    }
+  }
+}
