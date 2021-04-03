@@ -1,3 +1,4 @@
+include ../components/footer/footer.pug
 include ../components/arrow/arrow.pug
 include ../components/btn-green/btn-green.pug
 include ../components/card-animal/card-animal.pug
@@ -91,12 +92,30 @@ html
               +cardAnimal({fileName: 'penguin', title: 'Penguin, USA'})
             .right
               +arrow({dir: 'right'})
+          +btnGreen({text: 'Choose your favorite', h: 50, w: 286})
         </div>
       </section>
 
       <section class="pay">
         <div class="container">
           <h2>Pay and feed</h2>
+          .wrapper 
+            .arrows
+            .card
+              .icon 
+                img(src="../../assets/images/pay/card.png", alt="card")
+              .text 
+                | You can pay for a donation to any animal using your Credit/Debit card
+            .card
+              .icon 
+                img(src="../../assets/images/pay/zoo.png", alt="zoo")
+              .text 
+                | Donations will go to the account of the zoo or nature reserve
+            .card
+              .icon 
+                img(src="../../assets/images/pay/panda.png", alt="panda")
+              .text 
+                | The animal will receive a delicious treat during feeding hours
         </div>
       </section>
 
@@ -141,7 +160,7 @@ html
       </section>
     </main>
 
-    include ../components/footer/footer.pug 
+    +footer({isZoo: false})
 
     <script src="./scripts.js"></script>
   </body>

@@ -1,33 +1,41 @@
-footer
-  <div class="bg"></div>
-  .container.line1
-    .left
-      .logo
-        <img src="../../../assets/images/logo.svg" alt="logo">
-      button.btn Donate for volunteers
-    .right
-      .menu1
-        a(href="#") About
-        a(href="#") Map
-      .menu2
-        a(href="#") Contact us
-        a(href="#") Feedback
-      .social
-        .item
-          a(href="#") <img src="../../../assets/icons/insta.svg" alt="insta">
-        .item
-          a(href="#") <img src="../../../assets/icons/facebook.svg" alt="facebook">
-        .item
-          a(href="#") <img src="../../../assets/icons/twitter.svg" alt="twitter">
-        .item
-          a(href="#") <img src="../../../assets/icons/youtube.svg" alt="youtube">
-  .container.line2
-    .logos
-      .rss
-        <img src="../../../assets/images/logo-rss.png" alt="logo-rss">
-      .yem
-        <img src="../../../assets/images/logo-yem.png" alt="logo-yem">
-    .copy
-      .text Copyright ©RSSchool and ©Yem Digital 2020 - 2021
-    .design
-      .text Grigoreva Margarita
+mixin footer(props)
+  -
+    var assetsPath = `${props.isZoo ? '../' : ''}../../assets/`;
+
+  footer
+    <div class="bg"></div>
+    .container.line1
+      .left
+        .logo
+          img(src=`${assetsPath}images/logo.svg`, alt="logo")
+        button.btn Donate for volunteers
+      .right
+        .menu1
+          a(href="#") About
+          a(href="#") Map
+        .menu2
+          a(href="#") Contact us
+          a(href="#") Feedback
+        .social
+          .item
+            a(href="#")
+              img(src=`${assetsPath}icons/insta.svg`, alt="insta")
+          .item
+            a(href="#")
+              img(src=`${assetsPath}icons/facebook.svg`, alt="facebook")
+          .item
+            a(href="#")
+              img(src=`${assetsPath}icons/twitter.svg`, alt="twitter")
+          .item
+            a(href="#")
+              img(src=`${assetsPath}icons/youtube.svg`, alt="youtube")
+    .container.line2
+      .logos
+        .rss
+          img(src=`${assetsPath}images/logo-rss.png`, alt="logo-rss", title="Rolling Scopes School")
+        .yem
+          img(src=`${assetsPath}images/logo-yem.png`, alt="logo-yem", title="Yem Digital")
+      .copy
+        .text Copyright ©RSSchool and ©Yem Digital 2020 - 2021
+      .design
+        .text Grigoreva Margarita

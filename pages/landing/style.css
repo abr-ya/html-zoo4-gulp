@@ -173,6 +173,37 @@ header {
           font-size: 18px; }
 
 /* /.pets */
+.pay .wrapper {
+  display: flex;
+  justify-content: space-around;
+  position: relative; }
+  .pay .wrapper .arrows {
+    position: absolute;
+    top: -150px;
+    left: 270px;
+    z-index: 10;
+    width: 620px;
+    height: 620px;
+    background-image: url("../../assets/images/pay/arrows.png");
+    background-repeat: no-repeat;
+    background-position: center; }
+  .pay .wrapper .card {
+    width: 320px;
+    height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../../assets/images/pay/bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative; }
+    .pay .wrapper .card .text {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 38px; }
+
 /* /.pay */
 .testimonials .left, .testimonials .right {
   display: flex;
@@ -184,9 +215,20 @@ header {
 
 /* /.testimonials */
 
+.btnGreen {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  background-color: #70CB0E;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin-top: 50px; }
+
 .arrow {
   background-color: #FFE68E;
-  background-image: url("/assets/images/arrow-next.svg");
+  background-image: url("../../assets/images/arrow-next.svg");
   background-repeat: no-repeat;
   background-position: 18px center;
   width: 45px;
@@ -202,39 +244,6 @@ header {
     transform: rotate(270deg); }
   .arrow.arrow-down {
     transform: rotate(90deg); }
-
-.btnGreen {
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 21px;
-  background-color: #70CB0E;
-  border-radius: 30px;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  margin-top: 50px; }
-
-.cardAnimal {
-  width: 233px;
-  height: 300px;
-  transition: .3s all;
-  position: relative; }
-  .cardAnimal .title {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center; }
-    .cardAnimal .title h4 {
-      color: #FFFFFF;
-      font-size: 16px;
-      line-height: 19px;
-      font-weight: 400;
-      transition: .3s all; }
-  .cardAnimal:hover {
-    transform: scale(1.087, 1.1); }
-    .cardAnimal:hover h4 {
-      font-size: 18px; }
 
 .cardComment {
   width: calc(233px - 40px);
@@ -281,6 +290,28 @@ header {
     font-size: 16px;
     line-height: 19px;
     text-align: left; }
+
+.cardAnimal {
+  width: 233px;
+  height: 300px;
+  transition: .3s all;
+  position: relative; }
+  .cardAnimal .title {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center; }
+    .cardAnimal .title h4 {
+      color: #FFFFFF;
+      font-size: 16px;
+      line-height: 19px;
+      font-weight: 400;
+      transition: .3s all; }
+  .cardAnimal:hover {
+    transform: scale(1.087, 1.1); }
+    .cardAnimal:hover h4 {
+      font-size: 18px; }
 
 footer {
   height: 270px;

@@ -244,9 +244,45 @@ header {
 /* /.pets */
 
 
-// .pay {
+.pay {
+  .wrapper {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
 
-// }
+    .arrows {
+      position: absolute;
+      top: -150px;
+      left: 270px;
+      z-index: 10;
+      width: 620px;
+      height: 620px;
+      background-image: url('../../assets/images/pay/arrows.png');
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    .card {
+      width: 320px;
+      height: 320px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-image: url('../../assets/images/pay/bg.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      position: relative;
+
+      .text {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 38px;
+      }
+    }
+  }
+}
 /* /.pay */
 
 
