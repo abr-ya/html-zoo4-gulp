@@ -22,6 +22,25 @@ section {
   .information .bottom .col {
     width: calc(50% - 10px); }
 
+.arrow {
+  background-color: #FFE68E;
+  background-image: url("/assets/images/arrow-next.svg");
+  background-repeat: no-repeat;
+  background-position: 18px center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  transition: 1s all;
+  cursor: pointer; }
+  .arrow.arrow-left {
+    transform: rotate(180deg); }
+  .arrow.arrow-up {
+    transform: rotate(270deg); }
+  .arrow.arrow-down {
+    transform: rotate(90deg); }
+
 footer {
   height: 270px;
   width: 100%;

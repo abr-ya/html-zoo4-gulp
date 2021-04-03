@@ -5,6 +5,11 @@ const concat = require('gulp-concat');
 const browserSync = require('browser-sync').create();
 
 // pug
+gulp.task('pug-landing', () => {
+  return gulp.src('src/pug/landing/index.pug').pipe(pug({pretty:true}))
+    .pipe(gulp.dest('pages/landing/')).pipe(browserSync.stream())
+});
+
 gulp.task('pug-panda', () => {
   return gulp.src('src/pug/panda/index.pug').pipe(pug({pretty:true}))
     .pipe(gulp.dest('pages/zoos/panda/')).pipe(browserSync.stream())
@@ -29,7 +34,7 @@ gulp.task('pug-gorilla', () => {
 // });
 
 gulp.task('sass-landing', () => {
-  return gulp.src('src/scss/landing.scss')
+  return gulp.src(['src/scss/landing.scss', 'src/pug/components/**/*.scss'])
     .pipe(sass()).pipe(concat('style.css')).pipe(gulp.dest('pages/landing'))
     .pipe(browserSync.stream())
 });
@@ -62,15 +67,19 @@ gulp.task('js-zoo', () => {
 // при изменении компонента, шаблона или scss в папке
 const pugWatch = [
   'src/pug/components/**/*.*',
-  'src/pug/templates/zoo.pug',
+  'src/pug/templates/*.pug',
   'src/**/*.scss',
-]
+];
 
 gulp.task('default', () => {
   browserSync.init({
     server: './',
     port: 3010
   });
+  gulp.watch(
+    [...pugWatch, 'src/pug/landing/index.pug', 'src/pug/templates/landing.pug'],
+    gulp.series(['pug-landing', 'sass-landing'])
+  );
   gulp.watch([...pugWatch, 'src/pug/panda/index.pug'], gulp.series('pug-panda'));
   gulp.watch([...pugWatch, 'src/pug/gorilla/index.pug'], gulp.series(['pug-gorilla', 'sass-zoo', 'js-zoo']));
   gulp.watch('src/scss/landing.scss', gulp.series('sass-landing'));
