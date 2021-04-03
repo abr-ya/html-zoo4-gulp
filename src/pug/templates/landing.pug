@@ -1,4 +1,5 @@
 include ../components/arrow/arrow.pug
+include ../components/card-animal/card-animal.pug
 
 doctype html
 html
@@ -75,35 +76,17 @@ html
             .left
               +arrow({dir: 'left'})
             .item
-              .card
-                a(href="#")
-                  img(src="../../../assets/images/pets/panda.jpg", alt="")
-                  .title
-                    h4 Panda, China
-              .card
-                a(href="#")
-                  img(src="../../../assets/images/pets/polar_bear.jpg", alt="")
+              +cardAnimal({fileName: 'panda', title: 'Panda, China'})
+              +cardAnimal({fileName: 'polar_bear', title: 'Polar bear, Canada'})
             .item
-              .card
-                a(href="#")
-                  img(src="../../../assets/images/pets/panda.jpg", alt="")
-              .card
-                a(href="#")
-                  img(src="../../../assets/images/pets/polar_bear.jpg", alt="")
+              +cardAnimal({fileName: 'alligator', title: 'Alligator, USA'})
+              +cardAnimal({fileName: 'bald_eagle', title: 'Bald eagle, USA'})
             .item
-              .card
-                a(href="#")
-                  img(src="../../../assets/images/pets/panda.jpg", alt="")
-              .card
-                a(href="#")
-                  img(src="../../../assets/images/pets/polar_bear.jpg", alt="")
+              +cardAnimal({fileName: 'gorilla', title: 'Gorilla, Eastern DRC'})
+              +cardAnimal({fileName: 'arctic_owl', title: 'Arctic snowy owl, Alaska'})
             .item
-              .card
-                a(href="#")
-                  img(src="../../../assets/images/pets/panda.jpg", alt="")
-              .card
-                a(href="#")
-                  img(src="../../../assets/images/pets/polar_bear.jpg", alt="")
+              +cardAnimal({fileName: 'elephant', title: 'Elephant, South Africa'})
+              +cardAnimal({fileName: 'penguin', title: 'Penguin, USA'})
             .right
               +arrow({dir: 'right'})
         </div>

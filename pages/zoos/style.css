@@ -41,6 +41,28 @@ section {
   .arrow.arrow-down {
     transform: rotate(90deg); }
 
+.cardAnimal {
+  width: 233px;
+  height: 300px;
+  transition: .3s all;
+  position: relative; }
+  .cardAnimal .title {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center; }
+    .cardAnimal .title h4 {
+      color: #FFFFFF;
+      font-size: 16px;
+      line-height: 19px;
+      font-weight: 400;
+      transition: .3s all; }
+  .cardAnimal:hover {
+    transform: scale(1.087, 1.1); }
+    .cardAnimal:hover h4 {
+      font-size: 18px; }
+
 footer {
   height: 270px;
   width: 100%;
