@@ -67,7 +67,7 @@ gulp.task('js-zoo', () => {
 // при изменении компонента, шаблона или scss в папке
 const pugWatch = [
   'src/pug/components/**/*.*',
-  'src/pug/templates/*.pug',
+  'src/pug/templates/*.*',
   'src/**/*.scss',
 ];
 

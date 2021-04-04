@@ -1,6 +1,9 @@
 extends ../templates/zoo.pug
 include ../components/info2/info2.pug
 
+append config
+  - var animal = 'gorilla'
+
 block title
   | Gorilla
 

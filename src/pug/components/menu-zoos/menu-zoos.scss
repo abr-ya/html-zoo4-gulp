@@ -1,0 +1,54 @@
+$st1: #70CB0E;
+$st2: #212121;
+$st3: #FFFFFF;
+$st4: #DFF5B0;
+$st5: #FFE68E;
+$st6: #9CA498;
+$st7: #A7E1FF;
+
+.menuWrapper {
+  position: absolute;
+  width: 112px;
+  height: 100%;
+
+  .menuZoos {
+    position: sticky;
+    top: 0;
+    width: 112px;
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url('./../../assets/images/bg-menu.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    .item {
+      box-sizing: border-box;
+      width: 64px;
+      height: 64px;
+      margin-left: 20px;
+      margin-bottom: 8px;
+      background-color: $st1;
+      border-radius: 50%;
+      border: 2px solid $st3;
+      position: relative;
+
+      &.active {
+        border: 4px solid $st1;
+      }
+
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    .item:hover {
+      .tooltip {
+        opacity: 1;
+      }
+    } 
+  }
+}
