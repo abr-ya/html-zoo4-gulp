@@ -6,7 +6,8 @@ mixin header(props)
     .container.menu
       .left
         .logo
-          img(src="../../../assets/images/logo.svg", alt="logo")        
+          a(href=`${pagesPath}landing/`) 
+            img(src=`${pagesPath}../assets/images/logo.svg`, alt="logo")        
         ul.nav
           li.nav-item
             a.nav-link(href=`${pagesPath}landing/`) About
@@ -15,8 +16,12 @@ mixin header(props)
           li.nav-item
             a.nav-link(href=`${pagesPath}zoos/panda/`, class=`${!props.isZoo ? '' : 'active'}`) Zoos
           li.nav-item
-            a.nav-link(href="#") Contact us
+            a.nav-link(href=`${pagesPath}404/`) Contact us
           li.nav-item
-            a.nav-link(href="#") Design   
+            a.nav-link(
+              href="https://www.figma.com/file/aBvQMVmI665DtzprpiniuH/online-zoo?node-id=2932%3A0",
+              target="_blank"
+            ) Design   
 
       .right
+        h1 Online Zoo

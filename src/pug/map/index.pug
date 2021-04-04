@@ -1,10 +1,13 @@
 extends ../templates/map.pug
 
+include ../components/menu-map/menu-map.pug
+
 block title
   | Map
 
-block pageTitle
-  | Map
-
 block content
-  | Здесь будет карта
+  +menuMap({animal: 'panda'})
+  .temp 
+    .text(class='usa') USA
+    .text(class='drc') Eastern <br>DRC
+    .text(class='china') China

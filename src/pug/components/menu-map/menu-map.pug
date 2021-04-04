@@ -1,0 +1,23 @@
+include ../tooltip/tooltip.pug
+
+mixin menuMap(props)
+  -
+    var assetsPath = '../../assets/';
+
+  .menuMap
+    .item(class=`alligator ${animal === 'alligator' ? 'active' : ''}`)
+      a(href="../zoos/alligator/")
+        img(src=`${assetsPath}images/menu-zoos/alligator.png`, alt="alligator")
+        +tooltip({animal: 'alligator', place: 'Florida, USA'})
+    .item(class=`panda ${animal === 'panda' ? 'active' : ''}`)
+      a(href="../zoos/panda/")
+        img(src=`${assetsPath}images/menu-zoos/panda.png`, alt="panda")
+        +tooltip({animal: 'Panda,', place: 'China'})
+    .item(class=`eagle ${animal === 'eagle' ? 'active' : ''}`)
+      a(href="../zoos/eagle/")
+        img(src=`${assetsPath}images/menu-zoos/eagle.png`, alt="eagle")
+        +tooltip({animal: 'Eagle,', place: 'California, USA'})
+    .item(class=`gorilla ${animal === 'gorilla' ? 'active' : ''}`)
+      a(href="../zoos/gorilla/")
+        img(src=`${assetsPath}images/menu-zoos/gorilla.png`, alt="gorilla")
+        +tooltip({animal: 'Gorilla,', place: 'Eastern DRC'})
