@@ -1,13 +1,22 @@
-header
-  .container.menu
-    .left
-      .logo
-        <img src="../../../assets/images/logo.svg" alt="logo">        
-      ul.nav
-        <li class="nav-item"><a href="../../landing/" class="nav-link">About</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Map</a></li>
-        <li class="nav-item"><a href="#" class="nav-link active">Zoos</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Contact us</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Design</a></li>      
+mixin header(props)
+  -
+    var pagesPath = props.isZoo ? '../../' : '../';
 
-    .right
+  header
+    .container.menu
+      .left
+        .logo
+          img(src="../../../assets/images/logo.svg", alt="logo")        
+        ul.nav
+          li.nav-item
+            a.nav-link(href=`${pagesPath}landing/`) About
+          li.nav-item
+            a.nav-link(href=`${pagesPath}map/`, class=`${props.isZoo ? '' : 'active'}`) Map
+          li.nav-item
+            a.nav-link(href=`${pagesPath}zoos/panda/`, class=`${!props.isZoo ? '' : 'active'}`) Zoos
+          li.nav-item
+            a.nav-link(href="#") Contact us
+          li.nav-item
+            a.nav-link(href="#") Design   
+
+      .right

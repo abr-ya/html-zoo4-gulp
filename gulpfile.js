@@ -10,6 +10,11 @@ gulp.task('pug-landing', () => {
     .pipe(gulp.dest('pages/landing/')).pipe(browserSync.stream())
 });
 
+gulp.task('pug-map', () => {
+  return gulp.src('src/pug/map/index.pug').pipe(pug({pretty:true}))
+    .pipe(gulp.dest('pages/map/')).pipe(browserSync.stream())
+});
+
 gulp.task('pug-panda', () => {
   return gulp.src('src/pug/panda/index.pug').pipe(pug({pretty:true}))
     .pipe(gulp.dest('pages/zoos/panda/')).pipe(browserSync.stream())
@@ -40,7 +45,7 @@ gulp.task('sass-landing', () => {
 });
 
 gulp.task('sass-map', () => {
-  return gulp.src('src/scss/map.scss')
+  return gulp.src(['src/scss/map.scss', 'src/pug/components/**/*.scss'])
     .pipe(sass()).pipe(concat('style.css')).pipe(gulp.dest('pages/map'))
     .pipe(browserSync.stream())
 });
@@ -77,8 +82,12 @@ gulp.task('default', () => {
     port: 3010
   });
   gulp.watch(
-    [...pugWatch, 'src/pug/landing/index.pug', 'src/pug/templates/landing.pug'],
+    [...pugWatch, 'src/pug/landing/index.pug'],
     gulp.series(['pug-landing', 'sass-landing'])
+  );
+  gulp.watch(
+    [...pugWatch, 'src/pug/map/index.pug'],
+    gulp.series(['pug-map', 'sass-map'])
   );
   gulp.watch([...pugWatch, 'src/pug/panda/index.pug'], gulp.series('pug-panda'));
   gulp.watch([...pugWatch, 'src/pug/gorilla/index.pug'], gulp.series(['pug-gorilla', 'sass-zoo', 'js-zoo']));

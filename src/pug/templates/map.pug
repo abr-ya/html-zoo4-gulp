@@ -1,8 +1,5 @@
 include ../components/header/header.pug
 include ../components/footer/footer.pug
-include ../components/menu-zoos/menu-zoos.pug
-
-block config
 
 doctype html
 html
@@ -15,31 +12,20 @@ html
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     meta(name='viewport' content='width=device-width, initial-scale=1.0')
-    link(href='../style.css' rel='stylesheet')
+    link(href='./style.css' rel='stylesheet')
   body
-    +header({isZoo: true}) 
+    +header({isZoo: false}) 
     
     main
-      +menuZoos({animal})
       section.title
         .container
           h1
             block pageTitle
 
-      section.video
+      section.map
         .container
-          block video
+          block content
 
-      section.information
-        .container
-          .top
-            block infoTop
-          .bottom
-            .col
-              block infoLeft
-            .col
-              block infoRight
-
-    +footer({isZoo: true}) 
+    +footer({isZoo: false}) 
   
-    <script src="../script.js"></script>
+    <script src="./scripts.js"></script>
