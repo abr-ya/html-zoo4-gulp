@@ -1,17 +1,26 @@
 extends ../templates/zoo.pug
+include ../components/yt-player/yt-player.pug
+include ../components/info/info.pug
 include ../components/info2/info2.pug
 
 append config
-  - var animal = 'gorilla'
-
-block title
-  | Gorilla
-
-block pageTitle
-  | Gorilla
+  - var title = 'Gorilla'
+  - var animal = 'gorilla' // для путей и работы меню
+  - var video = 'rgXWDk7rh4w'
+  - var zoo = 'GRACE Center (Kasugho, Eastern DRC)'
+  - var type = 'Imitation of the natural environment'
+  - var population = 'The eastern plains gorilla has a population of 17,000.'
+  - var nutrition = 'The basis of gorilla food is plant food. From the plants used, wild celery, bedstraw, nettle, bamboo shoots, blue pygeum fruits can be distinguished. Fruits and nuts are an addition to the main diet, while animal food (insects) is a small part of the menu.'
+  - var habitat = 'The natural habitat of gorillas covers tropical or subtropical forests in sub – Saharan Africa.'
+  - var facts = 'The DNA of gorillas is strongly similar to that of humans, 95 to 99% depending on what is included, and they are the next closest living relatives of humans after chimpanzees and bonobos.'
 
 block infoTop
-  +info2({
-    zoo: "GRACE Center (Kasugho, Eastern DRC)",
-    type: "Imitation of the natural environment"
-  })
+  +info2({zoo, type})
+
+block infoLeft
+  +info({title: "Population", text: population})
+  +info({title: "Nutrition", text: nutrition})
+
+block infoRight
+  +info({title: "Habitat", text: habitat})
+  +info({title: "Interesting facts", text: facts})
