@@ -81,7 +81,11 @@ footer {
       margin-bottom: 15px;
       text-decoration: none;
       transition: .2s all;
-      color: $st2;    
+      color: $st2;
+      
+      &:hover {
+        color: $st1;
+      }
     }
   }
   /* /line1 */

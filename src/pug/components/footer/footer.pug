@@ -1,33 +1,35 @@
 mixin footer(props)
   -
     var assetsPath = `${props.isZoo ? '../' : ''}../../assets/`;
+    var pagesPath = props.isZoo ? '../../' : '../';
 
   footer
     <div class="bg"></div>
     .container.line1
       .left
         .logo
-          img(src=`${assetsPath}images/logo.svg`, alt="logo")
+          a(href=`${pagesPath}landing/`) 
+            img(src=`${assetsPath}images/logo.svg`, alt="logo")
         button.btn Donate for volunteers
       .right
         .menu1
-          a(href="#") About
-          a(href="#") Map
+          a(href=`${pagesPath}landing/`) About
+          a(href=`${pagesPath}map/`) Map
         .menu2
-          a(href="#") Contact us
-          a(href="#") Feedback
+          a(href=`${pagesPath}404/`) Contact us
+          a(href=`${pagesPath}404/`) Feedback
         .social
           .item
-            a(href="#")
+            a(href="https://www.instagram.com/?hl=ru", target="_blank")
               img(src=`${assetsPath}icons/insta.svg`, alt="insta")
           .item
-            a(href="#")
+            a(href="https://www.facebook.com/", target="_blank")
               img(src=`${assetsPath}icons/facebook.svg`, alt="facebook")
           .item
-            a(href="#")
+            a(href="https://twitter.com/?lang=en", target="_blank")
               img(src=`${assetsPath}icons/twitter.svg`, alt="twitter")
           .item
-            a(href="#")
+            a(href="https://www.youtube.com/", target="_blank")
               img(src=`${assetsPath}icons/youtube.svg`, alt="youtube")
     .container.line2
       .logos
