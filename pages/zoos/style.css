@@ -23,8 +23,7 @@ section {
   margin-bottom: 30px; }
   .video .top {
     width: 100%;
-    height: 653px;
-    background-color: #A7E1FF; }
+    height: 653px; }
   .video .small {
     width: 100%;
     height: 155px;
@@ -53,13 +52,17 @@ section {
   border: none;
   outline: none;
   transition: 1s all;
-  cursor: pointer; }
+  cursor: pointer;
+  opacity: 0.8;
+  transition: .2s all; }
   .arrow.arrow-left {
     transform: rotate(180deg); }
   .arrow.arrow-up {
     transform: rotate(270deg); }
   .arrow.arrow-down {
     transform: rotate(90deg); }
+  .arrow:hover {
+    opacity: 1; }
 
 .btnGreen {
   font-size: 18px;
@@ -230,48 +233,6 @@ footer {
       line-height: 21px;
       color: #212121; }
 
-header {
-  width: 100%;
-  height: 80px;
-  display: flex;
-  flex-direction: column;
-  align-items: center; }
-  header .container.menu {
-    display: flex;
-    margin: 12px 0; }
-    header .container.menu .left {
-      width: 50%;
-      height: 58px;
-      display: flex;
-      justify-content: space-around;
-      list-style-type: none; }
-      header .container.menu .left .nav {
-        width: 100%;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        list-style-type: none;
-        padding: 0; }
-        header .container.menu .left .nav .nav-link {
-          color: #212121;
-          font-size: 18px;
-          line-height: 21;
-          font-weight: 500;
-          text-decoration: none;
-          transition: .2s all; }
-          header .container.menu .left .nav .nav-link.active {
-            text-shadow: -1px -1px 0 #70CB0E, 1px 1px 0 #70CB0E;
-            cursor: default; }
-            header .container.menu .left .nav .nav-link.active:hover {
-              color: #212121; }
-          header .container.menu .left .nav .nav-link:hover {
-            color: #70CB0E; }
-    header .container.menu .right {
-      position: relative; }
-      header .container.menu .right h1 {
-        position: absolute;
-        top: -100px; }
-
 .info {
   display: flex;
   justify-content: space-between;
@@ -316,6 +277,48 @@ header {
       opacity: 1; }
     .info.open .arrow {
       transform: rotate(90deg); }
+
+header {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  header .container.menu {
+    display: flex;
+    margin: 12px 0; }
+    header .container.menu .left {
+      width: 50%;
+      height: 58px;
+      display: flex;
+      justify-content: space-around;
+      list-style-type: none; }
+      header .container.menu .left .nav {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        list-style-type: none;
+        padding: 0; }
+        header .container.menu .left .nav .nav-link {
+          color: #212121;
+          font-size: 18px;
+          line-height: 21;
+          font-weight: 500;
+          text-decoration: none;
+          transition: .2s all; }
+          header .container.menu .left .nav .nav-link.active {
+            text-shadow: -1px -1px 0 #70CB0E, 1px 1px 0 #70CB0E;
+            cursor: default; }
+            header .container.menu .left .nav .nav-link.active:hover {
+              color: #212121; }
+          header .container.menu .left .nav .nav-link:hover {
+            color: #70CB0E; }
+    header .container.menu .right {
+      position: relative; }
+      header .container.menu .right h1 {
+        position: absolute;
+        top: -100px; }
 
 .info2 {
   display: flex;
@@ -398,6 +401,18 @@ header {
       .menuWrapper .menuZoos .item img {
         height: 100%;
         width: 100%; }
+      .menuWrapper .menuZoos .item.feed {
+        display: flex;
+        align-items: center;
+        justify-content: center; }
+        .menuWrapper .menuZoos .item.feed button {
+          width: 38px;
+          height: 48px;
+          padding: 0;
+          background: transparent;
+          border: none;
+          outline: none;
+          cursor: pointer; }
     .menuWrapper .menuZoos .item:hover .tooltip {
       opacity: 1; }
 

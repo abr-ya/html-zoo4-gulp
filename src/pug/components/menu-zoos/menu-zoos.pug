@@ -10,7 +10,9 @@ mixin menuZoos(props)
       +menuItem({an: 'panda', animal, place: 'China'})
       +menuItem({an: 'eagle', animal, place: 'California, USA'})
       +menuItem({an: 'gorilla', animal, place: 'Eastern DRC'})
-      .item
+      .item.feed
+        button
+          img(src=`${assetsPath}images/menu-zoos/icon.png`, alt='Feed')
 
 mixin menuItem(props)
   -

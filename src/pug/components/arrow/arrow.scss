@@ -12,6 +12,8 @@ $st5: #FFE68E;
   outline: none;
   transition: 1s all;
   cursor: pointer;
+  opacity: 0.8;
+  transition: .2s all;
 
   &.arrow-left {
     transform: rotate(180deg);
@@ -23,5 +25,9 @@ $st5: #FFE68E;
 
   &.arrow-down {
     transform: rotate(90deg);
+  }
+
+  &:hover {
+    opacity: 1;
   }
 }

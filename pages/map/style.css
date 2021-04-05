@@ -54,13 +54,17 @@ section {
   border: none;
   outline: none;
   transition: 1s all;
-  cursor: pointer; }
+  cursor: pointer;
+  opacity: 0.8;
+  transition: .2s all; }
   .arrow.arrow-left {
     transform: rotate(180deg); }
   .arrow.arrow-up {
     transform: rotate(270deg); }
   .arrow.arrow-down {
     transform: rotate(90deg); }
+  .arrow:hover {
+    opacity: 1; }
 
 .btnGreen {
   font-size: 18px;
@@ -273,21 +277,6 @@ header {
         position: absolute;
         top: -100px; }
 
-.info2 {
-  display: flex;
-  background: #A7E1FF;
-  width: 100%;
-  min-height: 60px; }
-  .info2 .left,
-  .info2 .right {
-    width: 50%;
-    display: flex;
-    align-items: center;
-    padding: 20px; }
-  .info2 .title {
-    text-transform: uppercase;
-    margin-right: 5px; }
-
 .info {
   display: flex;
   justify-content: space-between;
@@ -332,6 +321,21 @@ header {
       opacity: 1; }
     .info.open .arrow {
       transform: rotate(90deg); }
+
+.info2 {
+  display: flex;
+  background: #A7E1FF;
+  width: 100%;
+  min-height: 60px; }
+  .info2 .left,
+  .info2 .right {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    padding: 20px; }
+  .info2 .title {
+    text-transform: uppercase;
+    margin-right: 5px; }
 
 .menuMap {
   top: 0;
@@ -399,6 +403,18 @@ header {
       .menuWrapper .menuZoos .item img {
         height: 100%;
         width: 100%; }
+      .menuWrapper .menuZoos .item.feed {
+        display: flex;
+        align-items: center;
+        justify-content: center; }
+        .menuWrapper .menuZoos .item.feed button {
+          width: 38px;
+          height: 48px;
+          padding: 0;
+          background: transparent;
+          border: none;
+          outline: none;
+          cursor: pointer; }
     .menuWrapper .menuZoos .item:hover .tooltip {
       opacity: 1; }
 

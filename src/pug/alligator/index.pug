@@ -1,0 +1,26 @@
+extends ../templates/zoo.pug
+include ../components/yt-player/yt-player.pug
+include ../components/info/info.pug
+include ../components/info2/info2.pug
+
+append config
+  - var title = 'Alligator'
+  - var animal = 'alligator' // для путей и работы меню
+  - var video = 'EnxRJii_dp8'
+  - var zoo = "Alligator Farm Zoological Park in Florida (USA)"
+  - var type = "Imitation of the natural environment"
+  - var population = "There are now more than 1 million alligators in the wild."
+  - var nutrition = "These apex predators eat mostly fish, turtles, snakes, birds and small mammals. But alligators are known for being opportunists; when hungry, they will attack larger prey like deer or cattle."
+  - var habitat = "Alligators are almost exclusively found in freshwater rivers, lakes, marshes or swamps."
+  - var facts = "American alligators are typically between 10 and 15 feet long and can weigh 1,000 lbs.  Despite being large and somewhat ungainly, alligators can run up to 11 mph on land--but they can't sustain that speed for very long."
+
+block infoTop
+  +info2({zoo, type})
+
+block infoLeft
+  +info({title: "Population", text: population})
+  +info({title: "Nutrition", text: nutrition})
+
+block infoRight
+  +info({title: "Habitat", text: habitat})
+  +info({title: "Interesting facts", text: facts})
