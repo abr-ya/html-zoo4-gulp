@@ -6,20 +6,23 @@ mixin menuZoos(props)
 
   .menuWrapper
     .menuZoos
-      a(href="../alligator/")
-        .item(class=`${animal === 'alligator' ? 'active' : ''}`)
-          img(src=`${assetsPath}images/menu-zoos/alligator.png`, alt="alligator")
-          +tooltip({animal: 'alligator', place: 'Florida, USA'})
-      a(href="../panda/")
-        .item(class=`${animal === 'panda' ? 'active' : ''}`)
-          img(src=`${assetsPath}images/menu-zoos/panda.png`, alt="panda")
-          +tooltip({animal: 'Panda,', place: 'China'})
-      a(href="../eagle/")
-        .item(class=`${animal === 'eagle' ? 'active' : ''}`)
-          img(src=`${assetsPath}images/menu-zoos/eagle.png`, alt="eagle")
-          +tooltip({animal: 'Eagle,', place: 'California, USA'})
-      a(href="../gorilla/")
-        .item(class=`${animal === 'gorilla' ? 'active' : ''}`)
-          img(src=`${assetsPath}images/menu-zoos/gorilla.png`, alt="gorilla")
-          +tooltip({animal: 'Gorilla,', place: 'Eastern DRC'})
+      +menuItem({an: 'alligator', animal, place: 'Florida, USA'})
+      +menuItem({an: 'panda', animal, place: 'China'})
+      +menuItem({an: 'eagle', animal, place: 'California, USA'})
+      +menuItem({an: 'gorilla', animal, place: 'Eastern DRC'})
       .item
+
+mixin menuItem(props)
+  -
+    var assetsPath = '../../../assets/';
+    var isActive = props.animal === props.an;
+
+  if isActive
+    .item(class=`${isActive ? 'active' : ''}`)
+      img(src=`${assetsPath}images/menu-zoos/${props.an}.png`, alt=`${props.an}`)
+      +tooltip({animal: props.an, place: props.place })
+  else
+    a(href=`../${props.an}/`)
+      .item(class=`${isActive ? 'active' : ''}`)
+        img(src=`${assetsPath}images/menu-zoos/${props.an}.png`, alt=`${props.an}`)
+        +tooltip({animal: props.an, place: props.place })

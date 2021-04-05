@@ -73,6 +73,28 @@ section {
   cursor: pointer;
   margin-top: 50px; }
 
+.cardAnimal {
+  width: 233px;
+  height: 300px;
+  transition: .3s all;
+  position: relative; }
+  .cardAnimal .title {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center; }
+    .cardAnimal .title h4 {
+      color: #FFFFFF;
+      font-size: 16px;
+      line-height: 19px;
+      font-weight: 400;
+      transition: .3s all; }
+  .cardAnimal:hover {
+    transform: scale(1.087, 1.1); }
+    .cardAnimal:hover h4 {
+      font-size: 18px; }
+
 .cardComment {
   width: calc(233px - 40px);
   height: calc(369px - 40px);
@@ -118,28 +140,6 @@ section {
     font-size: 16px;
     line-height: 19px;
     text-align: left; }
-
-.cardAnimal {
-  width: 233px;
-  height: 300px;
-  transition: .3s all;
-  position: relative; }
-  .cardAnimal .title {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center; }
-    .cardAnimal .title h4 {
-      color: #FFFFFF;
-      font-size: 16px;
-      line-height: 19px;
-      font-weight: 400;
-      transition: .3s all; }
-  .cardAnimal:hover {
-    transform: scale(1.087, 1.1); }
-    .cardAnimal:hover h4 {
-      font-size: 18px; }
 
 footer {
   height: 270px;

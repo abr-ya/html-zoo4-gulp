@@ -1,4 +1,5 @@
 extends ../templates/zoo.pug
+include ../components/yt-player/yt-player.pug
 include ../components/info/info.pug
 include ../components/info2/info2.pug
 
@@ -12,7 +13,8 @@ block pageTitle
   | Panda
 
 block video
-  | Здесь будет видео
+  .top
+    +yPlayer({id: "OObOQ2GElhA"})
 
 block infoTop
   +info2({
