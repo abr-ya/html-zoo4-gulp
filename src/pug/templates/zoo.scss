@@ -32,14 +32,28 @@ section {
 }
 
 .video {
+  margin-bottom: 30px;
+
   .top {
-    width: 1160px;
+    width: 100%;
     height: 653px;
-    background-color: #A7E1FF;
+  }
+
+  .small {
+    width: 100%;
+    height: 155px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+
+    .item {
+      width: 275px;
+    }
   }
 }
 
 .information {
+  margin-top: 30px;
 
   .bottom {
     display: flex;

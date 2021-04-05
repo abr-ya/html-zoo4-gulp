@@ -10,7 +10,7 @@ html
     meta(charset='utf-8')
     title
       | Online Zoo -  
-      block title
+      =title
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
@@ -19,26 +19,38 @@ html
   body
     +header({isZoo: true}) 
     
-    main
-      +menuZoos({animal})
-      section.title
-        .container
-          h1
-            block pageTitle
+    .mainWrapper
+      aside 
+        +menuZoos({animal})
+      main
+        section.title
+          .container
+            h1
+              =title
 
-      section.video
-        .container
-          block video
+        section.video
+          .container
+            .top
+              +yPlayer({id: video})
+            .small 
+              .item
+                +yPlayer({id: video})
+              .item
+                +yPlayer({id: video})
+              .item
+                +yPlayer({id: video})
+              .item
+                +yPlayer({id: video})
 
-      section.information
-        .container
-          .top
-            block infoTop
-          .bottom
-            .col
-              block infoLeft
-            .col
-              block infoRight
+        section.information
+          .container
+            .top
+              block infoTop
+            .bottom
+              .col
+                block infoLeft
+              .col
+                block infoRight
 
     +footer({isZoo: true}) 
   

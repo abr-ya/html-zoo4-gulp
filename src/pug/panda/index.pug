@@ -4,42 +4,23 @@ include ../components/info/info.pug
 include ../components/info2/info2.pug
 
 append config
-  - var animal = 'panda'
-
-block title
-  | Panda
-
-block pageTitle
-  | Panda
-
-block video
-  .top
-    +yPlayer({id: "OObOQ2GElhA"})
+  - var title = 'Panda'
+  - var animal = 'panda' // для путей и работы меню
+  - var video = 'OObOQ2GElhA'
+  - var zoo = "The Shenshuping Gengda Panda Center (Sichuan, China)"
+  - var type = "Imitation of the natural environment"
+  - var population = "There are only an estimated 1600 pandas in the wild and about 325 in captivity."
+  - var nutrition = "Bamboo is indispensable for the big panda, 99% of their food is made up of shoots and leaves of the plant. Bamboo does not have a high nutritional value. And to meet the daily energy requirement, pandas need to eat between 23 and 40 kg of evergreen per day."
+  - var habitat = "Bamboo will occasionally «die off» forcing pandas to migrate to other areas to find enough bamboo. Today panda habitat is limited to the mountains in only a few provinces of southwestern China."
+  - var facts = "Pandas are slow moving and spend a considerable amount of time eating (16 — 24 hour period) and sleeping. Giant panda fur is coarse, dense and somewhat oily. Their coat keeps them warm in the cool moist climate of the mountain forests."
 
 block infoTop
-  +info2({
-    zoo: "The Shenshuping Gengda Panda Center (Sichuan, China)",
-    type: "Imitation of the natural environment"
-  })
+  +info2({zoo, type})
 
 block infoLeft
-  +info({
-    title: "Population",
-    text: "There are only an estimated 1600 pandas in the wild and about 325 in captivity."
-  })
-
-  +info({
-    title: "Nutrition",
-    text: "Bamboo is indispensable for the big panda, 99% of their food is made up of shoots and leaves of the plant. Bamboo does not have a high nutritional value. And to meet the daily energy requirement, pandas need to eat between 23 and 40 kg of evergreen per day."
-  })
+  +info({title: "Population", text: population})
+  +info({title: "Nutrition", text: nutrition})
 
 block infoRight
-  +info({
-    title: "Habitat",
-    text: "Bamboo will occasionally «die off» forcing pandas to migrate to other areas to find enough bamboo. Today panda habitat is limited to the mountains in only a few provinces of southwestern China."
-  })
-
-  +info({
-    title: "Interesting facts",
-    text: "Pandas are slow moving and spend a considerable amount of time eating (16 — 24 hour period) and sleeping. Giant panda fur is coarse, dense and somewhat oily. Their coat keeps them warm in the cool moist climate of the mountain forests."
-  })
+  +info({title: "Habitat", text: habitat})
+  +info({title: "Interesting facts", text: facts})

@@ -273,6 +273,21 @@ header {
         position: absolute;
         top: -100px; }
 
+.info2 {
+  display: flex;
+  background: #A7E1FF;
+  width: 100%;
+  min-height: 60px; }
+  .info2 .left,
+  .info2 .right {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    padding: 20px; }
+  .info2 .title {
+    text-transform: uppercase;
+    margin-right: 5px; }
+
 .info {
   display: flex;
   justify-content: space-between;
@@ -317,21 +332,6 @@ header {
       opacity: 1; }
     .info.open .arrow {
       transform: rotate(90deg); }
-
-.info2 {
-  display: flex;
-  background: #A7E1FF;
-  width: 100%;
-  min-height: 60px; }
-  .info2 .left,
-  .info2 .right {
-    width: 50%;
-    display: flex;
-    align-items: center;
-    padding: 20px; }
-  .info2 .title {
-    text-transform: uppercase;
-    margin-right: 5px; }
 
 .menuMap {
   top: 0;
