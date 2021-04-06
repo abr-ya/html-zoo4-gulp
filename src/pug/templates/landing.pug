@@ -1,3 +1,4 @@
+include ../components/header/header.pug
 include ../components/footer/footer.pug
 include ../components/arrow/arrow.pug
 include ../components/btn-green/btn-green.pug
@@ -17,37 +18,24 @@ html
     link(href='./style.css' rel='stylesheet')
     <link rel="shortcut icon" href="../../assets/icons/favicon.ico" type="image/x-icon">
   <body>
-    <header>
-      <div class="container menu">
-        <div class="left">
-          <div class="logo">
-            <img src="../../assets/images/logo.svg" alt="logo">        
-          </div>
-          <ul class="nav">
-            <li class="nav-item"><a href="#" class="nav-link active">About</a></li>
-            <li class="nav-item"><a href="../map/" class="nav-link">Map</a></li>
-            <li class="nav-item"><a href="../zoos/panda/" class="nav-link">Zoos</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Contact us</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Design</a></li>
-          </ul>          
-        </div>
-        <div class="right"></div>
-      </div>
-      <div class="container panda">
-        <h1>Watch your favorite animal ONLINE</h1>
+    .headerWrapper
+      +header({isZoo: false, path: 'landing'}) 
+      .bg1
+      .bg2
+      .container.panda
+        h2
+          | Watch your favorite animal ONLINE
         a(href="../zoos/panda/") 
           +btnGreen({text: 'Play', h: 50, w: 233})
-      </div>
-    </header>
 
     <main>
       <section class="how">
         <div class="container">
           <h2>How it works</h2>
           <div class="photo">
-            <div class="bg1"></div>
-            <div class="bg2"></div>
-            <ul class="slider">
+            .bg1
+            .bg2
+            ul.slider
               <li class="slot slot1">
                 <img src="../../assets/images/how/animal1.jpg" alt="animal-name">
               </li>
@@ -63,13 +51,20 @@ html
               <li class="slot slot5">
                 <img src="../../assets/images/how/animal5.jpg" alt="animal-name">
               </li>
-            </ul>
           </div>
           <div class="text">
-            <p>
-              The application Оnline zoo will allow you to watch zoos' and nature reserves' inhabitants in live. Currently, under video-surveillance are pandas in China, eagles on Catalina Island (USA), alligators in Florida and gorillas in the Congo. We are expanding our capabilities and soon online you will meet Arctic snowy owl in Alaska, Penguin in California, Elephant from South Africa and Polar bear from Canada. You will see unique video-shots at any time of the day. If you liked a pet you watch and you want to please it with a delicious treat, you can pay a donation and the animal will receive a surprise from you during feeding hours.
-              We want to thank you for helping the animals and give you discount coupons from our partners.
-            </p>
+            p
+              | The application Оnline zoo will allow you to watch zoos' and nature reserves' inhabitants in live.
+              | Currently, under video-surveillance are pandas in China, eagles on Catalina Island (USA),
+              | alligators in Florida and gorillas in the Congo. We are expanding our capabilities and soon online
+              | you will meet Arctic snowy owl in Alaska, Penguin in California, Elephant from South Africa and
+              | Polar bear from Canada. You will see unique video-shots at any time of the day. If you liked a pet
+              | you watch and you want to please it with a delicious treat, you can pay a donation and the animal
+              | will receive a surprise from you during feeding hours.
+            p
+              | We want to thank you for helping the animals and give you 
+              a(href="https://www.disneylandparis.com/en-us/", target="_blank") discount coupons
+              |  from our partners.
           </div>
         </div>
       </section>
@@ -81,20 +76,21 @@ html
             .left
               +arrow({dir: 'left'})
             .item
-              +cardAnimal({fileName: 'panda', title: 'Panda, China'})
+              +cardAnimal({fileName: 'panda', title: 'Panda, China', link: 'panda'})
               +cardAnimal({fileName: 'polar_bear', title: 'Polar bear, Canada'})
             .item
-              +cardAnimal({fileName: 'alligator', title: 'Alligator, USA'})
-              +cardAnimal({fileName: 'bald_eagle', title: 'Bald eagle, USA'})
+              +cardAnimal({fileName: 'alligator', title: 'Alligator, USA', link: 'aligator'})
+              +cardAnimal({fileName: 'bald_eagle', title: 'Bald eagle, USA', link: 'eagle'})
             .item
-              +cardAnimal({fileName: 'gorilla', title: 'Gorilla, Eastern DRC'})
+              +cardAnimal({fileName: 'gorilla', title: 'Gorilla, Eastern DRC', link: 'gorilla'})
               +cardAnimal({fileName: 'arctic_owl', title: 'Arctic snowy owl, Alaska'})
             .item
               +cardAnimal({fileName: 'elephant', title: 'Elephant, South Africa'})
               +cardAnimal({fileName: 'penguin', title: 'Penguin, USA'})
             .right
               +arrow({dir: 'right'})
-          +btnGreen({text: 'Choose your favorite', h: 50, w: 286})
+          a(href="../map/") 
+            +btnGreen({text: 'Choose your favorite', h: 50, w: 286})
         </div>
       </section>
 

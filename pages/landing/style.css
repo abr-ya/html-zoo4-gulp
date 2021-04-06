@@ -17,47 +17,41 @@ section {
     line-height: 47px;
     letter-spacing: 0em; }
 
-header {
+.headerWrapper {
   width: 100%;
   min-height: 700px;
   display: flex;
   flex-direction: column;
   align-items: center;
   background: radial-gradient(71.89% 152.21% at 40.1% 50%, #B5E6FF 0%, #59C3FB 100%); }
-  header .container.menu {
-    display: flex;
-    margin: 12px 0; }
-    header .container.menu .left {
-      width: 50%;
-      height: 58px;
-      display: flex;
-      justify-content: space-around;
-      list-style-type: none; }
-      header .container.menu .left .nav {
-        width: 100%;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        list-style-type: none;
-        padding: 0; }
-        header .container.menu .left .nav .nav-link {
-          color: #212121;
-          font-size: 18px;
-          line-height: 21;
-          font-weight: 500;
-          text-decoration: none;
-          transition: .2s all; }
-          header .container.menu .left .nav .nav-link.active {
-            text-shadow: -1px -1px 0 #70CB0E, 1px 1px 0 #70CB0E; }
-          header .container.menu .left .nav .nav-link:hover {
-            color: #70CB0E; }
-  header .container.panda {
+  .headerWrapper .bg1 {
+    position: absolute;
+    top: 0;
+    left: 190px;
+    height: 700px;
+    width: 1050px;
+    background-image: url("../../assets/images/bg-drops2.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 0; }
+  .headerWrapper .bg2 {
+    position: absolute;
+    top: 0;
+    left: 44%;
+    height: 700px;
+    width: 700px;
+    background-image: url("../../assets/images/bg-drops1.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 10; }
+  .headerWrapper .container.panda {
+    flex-grow: 1;
+    margin-top: -30px;
+    position: relative;
     background-image: url("../../assets/images/panda.png");
     background-repeat: no-repeat;
-    background-position: right center;
-    flex-grow: 1;
-    margin-top: -30px; }
-    header .container.panda h1 {
+    background-position: right bottom; }
+    .headerWrapper .container.panda h2 {
       width: 570px;
       margin-top: 150px;
       font-size: 70px;
@@ -412,7 +406,8 @@ header {
   height: 80px;
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  z-index: 20; }
   header .container.menu {
     display: flex;
     margin: 12px 0; }

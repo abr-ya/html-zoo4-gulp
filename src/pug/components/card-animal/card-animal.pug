@@ -1,6 +1,9 @@
 mixin cardAnimal(props)
+  - 
+    var cardLink = props.link ? `../zoos/${props.link}` : '../404/'
+
   .cardAnimal
-    a(href="#")
-      img(src=`../../assets/images/pets/${props.fileName}.jpg`, alt="")
+    a(href=`${cardLink}`)
+      img(src=`../../assets/images/pets/${props.fileName}.jpg`, alt=`${props.fileName}`)
       .title
         h4=props.title
