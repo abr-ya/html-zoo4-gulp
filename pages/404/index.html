@@ -5,8 +5,48 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Error 404</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1>Ooooooops... Page not found!((</h1>
+  <div class="wrapper">
+    <div class="logo">
+      <img src="../../assets/images/404.png" alt="Error 404">
+    </div>
+    <div class="link">
+      <a href="../landing/">Go back and try a different link</a>
+    </div>
+  </div>
+  <style>
+    .wrapper {
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    .logo {
+    }
+    .link a {
+      font-family: 'Bebas Neue', cursive;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 20px;
+      text-align: center;
+      color: #59C3FB;
+      cursor: pointer;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: .5s all;
+    }
+
+    .link a:hover {
+      font-size: 24px;
+      transform: scale(1.2);
+    }
+
+  </style>
 </body>
 </html>
