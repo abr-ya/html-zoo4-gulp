@@ -26,28 +26,43 @@ $st7: #A7E1FF;
     }
 
     &.eagle {
-      top: 490px;
-      left: 70px;
+      top: 495px;
+      left: 75px;
     }
 
     &.alligator {
-      top: 510px;
-      left: 300px;
+      top: 506px;
+      left: 307px;
     }
 
     &.gorilla {
-      top: 620px;
-      left: 650px;
+      top: 605px;
+      left: 655px;
     }
 
     &.panda {
-      top: 530px;
-      left: 910px;
+      top: 510px;
+      left: 920px;
     }
 
     img {
       height: 100%;
       width: 100%;
+    }
+
+    .tool-mini {
+      position: absolute;
+      left: 70px;
+      top: 15px;
+      padding: 4px 8px;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 19px;
+      background-color: transparent;
+      border: none;
+      color: $st2;
+      text-transform: uppercase;
+      transition: .3s all;
     }
   }
 
@@ -56,6 +71,11 @@ $st7: #A7E1FF;
 
     .tooltip {
       opacity: 1;
+    }
+
+    .tool-mini {
+      display: none;
+      opacity: 0;
     }
   } 
 }

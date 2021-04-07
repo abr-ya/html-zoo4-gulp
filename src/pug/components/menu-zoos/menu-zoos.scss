@@ -9,7 +9,7 @@ $st7: #A7E1FF;
 .menuWrapper {
   position: absolute;
   width: 112px;
-  height: 100%;
+  height: calc(100% + 400px);
 
   .menuZoos {
     position: sticky;

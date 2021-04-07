@@ -26,7 +26,7 @@ html
         h2
           | Watch your favorite animal ONLINE
         a(href="../zoos/panda/") 
-          +btnGreen({text: 'Play', h: 50, w: 233})
+          +btnGreen({text: 'Play', h: 50, w: 233, icon: '&#9658;'})
 
     <main>
       <section class="how">
@@ -79,7 +79,7 @@ html
               +cardAnimal({fileName: 'panda', title: 'Panda, China', link: 'panda'})
               +cardAnimal({fileName: 'polar_bear', title: 'Polar bear, Canada'})
             .item
-              +cardAnimal({fileName: 'alligator', title: 'Alligator, USA', link: 'aligator'})
+              +cardAnimal({fileName: 'alligator', title: 'Alligator, USA', link: 'alligator'})
               +cardAnimal({fileName: 'bald_eagle', title: 'Bald eagle, USA', link: 'eagle'})
             .item
               +cardAnimal({fileName: 'gorilla', title: 'Gorilla, Eastern DRC', link: 'gorilla'})

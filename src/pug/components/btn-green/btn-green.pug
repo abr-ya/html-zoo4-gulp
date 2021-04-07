@@ -1,3 +1,5 @@
 mixin btnGreen(props)
   button.btnGreen(style=`height: ${props.h}px; width: ${props.w}px;`)
+    if props.icon
+      span &#9658;
     =props.text

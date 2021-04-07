@@ -242,6 +242,8 @@ section {
   outline: none;
   cursor: pointer;
   margin-top: 50px; }
+  .btnGreen span {
+    margin-right: 10px; }
 
 .cardAnimal {
   width: 233px;
@@ -520,29 +522,45 @@ header {
     .menuMap .item.active {
       border: 4px solid #70CB0E; }
     .menuMap .item.eagle {
-      top: 490px;
-      left: 70px; }
+      top: 495px;
+      left: 75px; }
     .menuMap .item.alligator {
-      top: 510px;
-      left: 300px; }
+      top: 506px;
+      left: 307px; }
     .menuMap .item.gorilla {
-      top: 620px;
-      left: 650px; }
+      top: 605px;
+      left: 655px; }
     .menuMap .item.panda {
-      top: 530px;
-      left: 910px; }
+      top: 510px;
+      left: 920px; }
     .menuMap .item img {
       height: 100%;
       width: 100%; }
+    .menuMap .item .tool-mini {
+      position: absolute;
+      left: 70px;
+      top: 15px;
+      padding: 4px 8px;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 19px;
+      background-color: transparent;
+      border: none;
+      color: #212121;
+      text-transform: uppercase;
+      transition: .3s all; }
   .menuMap .item:hover {
     border: 4px solid #70CB0E; }
     .menuMap .item:hover .tooltip {
       opacity: 1; }
+    .menuMap .item:hover .tool-mini {
+      display: none;
+      opacity: 0; }
 
 .menuWrapper {
   position: absolute;
   width: 112px;
-  height: 100%; }
+  height: calc(100% + 400px); }
   .menuWrapper .menuZoos {
     position: sticky;
     top: 0;
