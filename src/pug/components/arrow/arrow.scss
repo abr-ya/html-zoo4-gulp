@@ -21,10 +21,14 @@ $st5: #FFE68E;
 
   &.arrow-up {
     transform: rotate(270deg);
+    width: 45px;
+    height: 45px;
   }
 
   &.arrow-down {
     transform: rotate(90deg);
+    width: 45px;
+    height: 45px;
   }
 
   &:hover {

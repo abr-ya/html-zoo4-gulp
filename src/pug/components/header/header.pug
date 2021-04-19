@@ -8,7 +8,7 @@ mixin header(props)
         .logo
           a(href=`${pagesPath}landing/`) 
             img(src=`${pagesPath}../assets/images/logo.svg`, alt="logo")        
-        ul.nav
+        ul.nav.no-mobile
           li.nav-item
             a.nav-link(href=`${pagesPath}landing/`, class=`${props.path === 'landing' ? 'active' : ''}`) About
           li.nav-item
@@ -25,3 +25,20 @@ mixin header(props)
 
       .right
         h1 Online Zoo
+        .mobButtonOpen.only-mobile
+          img(src=`${pagesPath}../assets/icons/menu1.svg`, alt="menu")
+        .mobMenu.only-mobile
+          ul.nav
+            li.nav-item
+              a.nav-link(href=`${pagesPath}landing/`, class=`${props.path === 'landing' ? 'active' : ''}`) About
+            li.nav-item
+              a.nav-link(href=`${pagesPath}map/`, class=`${props.path === 'map' ? 'active' : ''}`) Map
+            li.nav-item
+              a.nav-link(href=`${pagesPath}zoos/panda/`, class=`${props.isZoo ? 'active' : ''}`) Zoos
+            li.nav-item
+              a.nav-link(href=`${pagesPath}404/`) Contact us
+            li.nav-item
+              a.nav-link(
+                href="https://www.figma.com/file/aBvQMVmI665DtzprpiniuH/online-zoo?node-id=2932%3A0",
+                target="_blank"
+              ) Design         

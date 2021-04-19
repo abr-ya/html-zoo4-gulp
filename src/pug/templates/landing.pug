@@ -73,7 +73,7 @@ html
         <div class="container">
           <h2>Pets in zoo</h2>
           .slider
-            .left
+            .left.no-tablet
               +arrow({dir: 'left'})
             .item
               +cardAnimal({fileName: 'panda', title: 'Panda, China', link: 'panda'})
@@ -81,13 +81,13 @@ html
             .item
               +cardAnimal({fileName: 'alligator', title: 'Alligator, USA', link: 'alligator'})
               +cardAnimal({fileName: 'bald_eagle', title: 'Bald eagle, USA', link: 'eagle'})
-            .item
+            .item.no-mobile
               +cardAnimal({fileName: 'gorilla', title: 'Gorilla, Eastern DRC', link: 'gorilla'})
               +cardAnimal({fileName: 'arctic_owl', title: 'Arctic snowy owl, Alaska'})
-            .item
+            .item.no-tablet
               +cardAnimal({fileName: 'elephant', title: 'Elephant, South Africa'})
               +cardAnimal({fileName: 'penguin', title: 'Penguin, USA'})
-            .right
+            .right.no-tablet
               +arrow({dir: 'right'})
           a(href="../map/") 
             +btnGreen({text: 'Choose your favorite', h: 50, w: 286})
@@ -98,7 +98,7 @@ html
         <div class="container">
           <h2>Pay and feed</h2>
           .wrapper 
-            .arrows
+            .arrows.no-tablet
             .card
               .icon 
                 img(src="../../assets/images/pay/card.png", alt="card")
@@ -121,7 +121,7 @@ html
         <div class="container">
           <h2>Testimonials</h2>
           .wrapper
-            .left
+            .left.no-tablet
               +arrow({dir: 'left'})
             .item
               +cardComment({
@@ -137,21 +137,21 @@ html
                 coin: 13,
                 text: '"A disability prevents me from enjoying the outdoors and travel like I used to do. I really enjoy all the live cams and can spend HOURS watching real-time entertainment. Wild life style!"',
               })              
-            .item
+            .item.no-mobile
               +cardComment({
                 fileName: 'Alex',
                 title: 'Alex Barden',
                 coin: 7,
                 text: '"Here\'s a huge "thank-you" from New Hampshire - you allow me to travel the world without ever leaving the comfort of my office chair. Jammies on and coffee cup in hand, I am Phineas Fogg!!"',
               })
-            .item
+            .item.no-tablet
               +cardComment({
                 fileName: 'Alene',
                 title: 'Alene Ray',
                 coin: 18,
                 text: '"Thank you for all the knowledge, education, pleasure and happiness you have add to all our lives at no expense on our part. My humble thanks and gratitude are being wished for all of you. I want to thank you and feed the animals a small reward"',
               })
-            .right
+            .right.no-tablet
               +arrow({dir: 'right'})
           +btnGreen({text: 'Leave feedback', h: 50, w: 246})
         </div>
@@ -160,6 +160,7 @@ html
 
     +footer({isZoo: false})
 
+    <script src="../../assets/js/components.js"></script>
     <script src="./scripts.js"></script>
   </body>
 </html>

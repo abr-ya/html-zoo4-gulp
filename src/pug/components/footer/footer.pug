@@ -6,18 +6,18 @@ mixin footer(props)
   footer
     <div class="bg"></div>
     .container.line1
-      .left
+      .logoBox
         .logo
           a(href=`${pagesPath}landing/`) 
             img(src=`${assetsPath}images/logo.svg`, alt="logo")
+      .donate
         button.btn Donate for volunteers
-      .right
-        .menu1
-          a(href=`${pagesPath}landing/`) About
-          a(href=`${pagesPath}map/`) Map
-        .menu2
-          a(href=`${pagesPath}404/`) Contact us
-          a(href=`${pagesPath}404/`) Feedback
+      .menu
+        a(href=`${pagesPath}landing/`) About
+        a(href=`${pagesPath}map/`) Map
+        a(href=`${pagesPath}404/`) Contact us
+        a(href=`${pagesPath}404/`) Feedback
+      .socialBox
         .social
           .item
             a(href="https://www.instagram.com/?hl=ru", target="_blank")

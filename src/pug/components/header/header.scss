@@ -6,6 +6,10 @@ $st5: #FFE68E;
 $st6: #9CA498;
 $st7: #A7E1FF;
 
+$bpM: 639px;
+$bpT: 1199px;
+$bpL: 1919px;
+
 header {
   width: 100%;
   height: 80px;
@@ -24,6 +28,11 @@ header {
       display: flex;
       justify-content: space-around;
       list-style-type: none;
+
+      /* mobile */
+      @media only screen and (max-width: $bpM) {
+        justify-content: flex-start;
+      }
       
       .nav {
         width: 100%;
@@ -58,11 +67,36 @@ header {
     }
 
     .right {
+      width: 50%;
       position: relative;
 
       h1 {
         position: absolute;
         top: -100px;
+      }
+      
+      .mobButtonOpen {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+
+      .mobMenu {
+        position: fixed;
+        width: 300px;
+        height: 300px;
+        background-color: $st7;
+        padding: 10px;
+        margin: 0;
+        box-sizing: border-box;
+        top: 0;
+        right: -300px;
+        transition: right .2s;
+        z-index: 2000;
+
+        &.open {
+          right: 0;
+        }
       }
     }
   }

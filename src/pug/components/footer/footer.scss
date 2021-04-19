@@ -6,6 +6,10 @@ $st5: #FFE68E;
 $st6: #9CA498;
 $st7: #A7E1FF;
 
+$bpM: 639px;
+$bpT: 1199px;
+$bpL: 1919px;
+
 footer {
   height: 270px;
   width: 100%;
@@ -30,61 +34,100 @@ footer {
   .line2 {
     display: flex;
     padding-top: 70px;
+
+    @media only screen and (max-width: $bpM) {
+      flex-direction: column;
+    }
   }
 
   .line1 {
-    .left, .right {
-      width: 50%;
-      display: flex;
-    }
+    &>div {
+      width: 25%;
 
-    .logo {
-      width: 100px;
-      height: 50px;
-      margin-right: 100px;
-
-      img {
+      @media only screen and (max-width: $bpM) {
         width: 100%;
-        height: 100%;
+        margin-bottom: 40px;
+        display: flex;
+        justify-content: center;
       }
     }
 
-    .btn {
-      font-size: 18px;
-      font-weight: 400;
-      line-height: 21px;
-      width: 230px;
-      height: 50px;
-      background-color: $st1;
-      border-radius: 30px;
-      border: none;
-      outline: none;
-      cursor: pointer;
+    .logoBox {
+      .logo {
+        width: 100px;
+        height: 50px;
+        margin-right: 100px;
+
+        @media only screen and (max-width: $bpM) {
+          width: 100%;
+          margin-right: 0;
+        }
+  
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
     }
 
-    .right {
+    .donate {
+      .btn {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 21px;
+        width: 230px;
+        height: 50px;
+        background-color: $st1;
+        border-radius: 30px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+      }
+    }
+
+    .menu {
       display: flex;
       justify-content: space-between;
+      flex-wrap: wrap;
+
+      a {
+        display: block;
+        width: 50%;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 21px;
+        margin-bottom: 15px;
+        text-decoration: none;
+        transition: .2s all;
+        color: $st2;
+        
+        &:hover {
+          color: $st1;
+        }
+      }
+
+      @media only screen and (max-width: $bpM) {
+        flex-direction: column;
+
+        a {
+          width: 100%;
+          text-align: center;
+        }
+      }
+    }
+
+    .socialBox {
+      display: flex;
+      justify-content: flex-end;
+
+      @media only screen and (max-width: $bpM) {
+        justify-content: center;
+      }
 
       .social {
         width: 190px;
         display: flex;
         justify-content: space-between;
-      }
-    }
-
-    a {
-      display: block;
-      font-size: 18px;
-      font-weight: 400;
-      line-height: 21px;
-      margin-bottom: 15px;
-      text-decoration: none;
-      transition: .2s all;
-      color: $st2;
-      
-      &:hover {
-        color: $st1;
       }
     }
   }
@@ -94,6 +137,15 @@ footer {
     position: relative;
     display: flex;
     justify-content: center;
+
+    &>div {
+      @media only screen and (max-width: $bpM) {
+        position: initial !important;
+        margin-bottom: 40px;
+        display: flex;
+        justify-content: center;
+      }
+    }
 
     .logos {
       display: flex;

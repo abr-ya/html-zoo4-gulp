@@ -8,6 +8,11 @@ $st7: #A7E1FF;
   background-color: $st7;
   padding: 20px;
 
+  @media only screen and (max-width: 640px) {
+    width: calc(187px - 40px);
+    height: calc(429px - 40px);   
+  }
+
   .cardComment__top {
     display: flex;
 

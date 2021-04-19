@@ -6,6 +6,10 @@ $st5: #FFE68E;
 $st6: #9CA498;
 $st7: #A7E1FF;
 
+$bpM: 639px;
+$bpT: 1199px;
+$bpL: 1919px;
+
 body {
   font-family: 'Roboto', sans-serif;
 }
@@ -14,6 +18,21 @@ body {
   max-width: 1160px;
   width: 100%;
   margin: 0 auto;
+
+  /* laptop */
+  @media only screen and (max-width: $bpL) {
+    max-width: 1160px;
+  }
+
+  /* tablet */
+  @media only screen and (max-width: $bpT) {
+    max-width: 600px;
+  }
+
+  /* mobile */
+  @media only screen and (max-width: $bpM) {
+    max-width: calc(100% - 20px);
+  }
 }
 
 section {
@@ -27,6 +46,26 @@ section {
     font-weight: 500;
     line-height: 47px;
     letter-spacing: 0em;
+  }
+}
+
+.no-tablet {
+  @media only screen and (max-width: $bpT) {
+    display: none !important;
+  }
+}
+
+.no-mobile {
+  @media only screen and (max-width: $bpM) {
+    display: none !important;
+  }
+}
+
+.only-mobile {
+  display: none !important;
+
+  @media only screen and (max-width: $bpM) {
+    display: block !important;
   }
 }
 
@@ -49,6 +88,14 @@ section {
     background-repeat: no-repeat;
     background-position: center;
     z-index: 0;
+
+    @media only screen and (max-width: $bpL) {
+      left: -230px;
+    }
+
+    @media only screen and (max-width: $bpT) {
+      display: none;
+    }
   }
 
   .bg2 {
@@ -61,6 +108,11 @@ section {
     background-repeat: no-repeat;
     background-position: center;
     z-index: 10;
+
+    @media only screen and (max-width: $bpL) {
+      right: 0;
+      left: auto;
+    }
   }
 
   .container.panda {
@@ -71,12 +123,26 @@ section {
     background-repeat: no-repeat;
     background-position: right bottom;
 
+    @media only screen and (max-width: $bpM) {
+      background-position: left bottom;
+      z-index: 10;
+      margin-right: 0;
+    }
+
     h2 {
       width: 570px;
       margin-top: 150px;
       font-size: 70px;
-      font-weight: 900;
       line-height: 84px;
+      font-weight: 900;
+
+      @media only screen and (max-width: $bpM) {
+        width: 220px;
+        margin-top: 150px;
+        font-size: 50px;
+        line-height: 60px;
+        font-weight: 900;
+      }      
     }
   }
 }
@@ -84,13 +150,22 @@ section {
 
 
 .how {
-  .container {
-    max-width: 1370px;
+  @media only screen {
+    .container {
+      max-width: 1370px;
+    }
+  }
+
+  @media only screen and (max-width: $bpL) {
+    .container {
+      max-width: 1200px;
+    }
   }
 
   .photo {
     height: 555px;
     position: relative;
+    overflow: hidden;
 
     .bg1 {
       position: absolute;
@@ -102,6 +177,11 @@ section {
       background-repeat: no-repeat;
       background-position: center;
       background-size: contain;
+
+      @media only screen and (max-width: 1200px) {
+        top: 20px;
+        right: -100px; 
+      }
     }
 
     .bg2 {
@@ -114,6 +194,11 @@ section {
       background-repeat: no-repeat;
       background-position: center;
       background-size: contain;
+
+      @media only screen and (max-width: 1200px) {
+        bottom: -30px;
+        left: -100px;   
+      }
     }
 
     .slider {
@@ -121,6 +206,7 @@ section {
       width: 100%;
       position: relative;
       list-style-type: none;
+      padding: 0;
 
       .slot {
         position: absolute;
@@ -161,6 +247,14 @@ section {
         top: calc(50% - 450px/2);
         z-index: 10;
       }
+
+      @media only screen and (max-width: 1200px) {
+        .slot1 { left: calc(50% - 250px/2 - 460px); }
+        .slot5 { right: calc(50% - 250px/2 - 460px); }
+        
+        .slot2 { left: calc(50% - 300px/2 - 255px); }
+        .slot4 { right: calc(50% - 300px/2 - 255px); }        
+      }
     }
   }
 
@@ -170,6 +264,14 @@ section {
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
+
+    @media only screen and (max-width: $bpT) {
+      width: 536px;
+    }
+
+    @media only screen and (max-width: $bpM) {
+      width: 300px;
+    }
 
     p {
       margin: 0;
@@ -194,35 +296,12 @@ section {
       width: 233px;
       height: 630px;
 
-      .card {
-        width: 233px;
-        height: 300px;
-        transition: .3s all;
-        position: relative;
-
-        .title {
-          position: absolute;
-          top: 0;
-          width: 100%;
-          display: flex;
-          justify-content: center;
-
-          h4 {
-            color: $st3;
-            font-size: 16px;
-            line-height: 19px;
-            font-weight: 400;
-            transition: .3s all;
-          }
-        }
-        
-        &:hover {
-          transform: scale(1.087, 1.1);
-
-          h4 {
-            font-size: 18px;
-          }
-        }
+      @media only screen and (max-width: $bpT) {
+        width: 186px;
+      }
+    
+      @media only screen and (max-width: $bpM) {
+        width: calc(50% - 5px);
       }
     }
   }  
@@ -235,6 +314,10 @@ section {
     display: flex;
     justify-content: space-around;
     position: relative;
+
+    @media only screen and (max-width: $bpM) {
+      flex-direction: column;
+    }
 
     .arrows {
       position: absolute;
@@ -259,6 +342,10 @@ section {
       background-position: center;
       position: relative;
 
+      @media only screen and (max-width: $bpM) {
+        width: 300px;
+      }
+
       .text {
         position: absolute;
         bottom: 0;
@@ -273,13 +360,18 @@ section {
 
 
 .testimonials {
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    @media only screen and (max-width: $bpM) {
+      flex-direction: column;
+    }
+  }
+
   .left, .right {
     display: flex;
     align-items: center;
   }
-  .wrapper {
-    display: flex;
-    justify-content: space-between;
-  }  
 }
 /* /.testimonials */
