@@ -29,10 +29,11 @@ html
           +btnGreen({text: 'Play', h: 50, w: 233, icon: '&#9658;'})
 
     <main>
-      <section class="how">
-        <div class="container">
-          <h2>How it works</h2>
-          <div class="photo">
+      section.how
+        .container
+          h2
+            | How it works
+          .photo
             .bg1
             .bg2
             ul.slider
@@ -51,8 +52,7 @@ html
               <li class="slot slot5">
                 <img src="../../assets/images/how/animal5.jpg" alt="animal-name">
               </li>
-          </div>
-          <div class="text">
+          .text
             p
               | The application Оnline zoo will allow you to watch zoos' and nature reserves' inhabitants in live.
               | Currently, under video-surveillance are pandas in China, eagles on Catalina Island (USA),
@@ -65,9 +65,6 @@ html
               | We want to thank you for helping the animals and give you 
               a(href="https://www.disneylandparis.com/en-us/", target="_blank") discount coupons
               |  from our partners.
-          </div>
-        </div>
-      </section>
 
       <section class="pets">
         <div class="container">
@@ -89,6 +86,9 @@ html
               +cardAnimal({fileName: 'penguin', title: 'Penguin, USA'})
             .right.no-tablet
               +arrow({dir: 'right'})
+          .arrows-mobile
+              +arrow({dir: 'left'})
+              +arrow({dir: 'right'})
           a(href="../map/") 
             +btnGreen({text: 'Choose your favorite', h: 50, w: 286})
         </div>
@@ -104,11 +104,15 @@ html
                 img(src="../../assets/images/pay/card.png", alt="card")
               .text 
                 | You can pay for a donation to any animal using your Credit/Debit card
+            .arrow-mobile
+              img(src="../../assets/images/pay/arrow-down.svg", alt="next")
             .card
               .icon 
                 img(src="../../assets/images/pay/zoo.png", alt="zoo")
               .text 
                 | Donations will go to the account of the zoo or nature reserve
+            .arrow-mobile
+              img(src="../../assets/images/pay/arrow-down.svg", alt="next")
             .card
               .icon 
                 img(src="../../assets/images/pay/panda.png", alt="panda")
@@ -153,6 +157,9 @@ html
               })
             .right.no-tablet
               +arrow({dir: 'right'})
+            .arrows-mobile
+                +arrow({dir: 'left'})
+                +arrow({dir: 'right'})          
           +btnGreen({text: 'Leave feedback', h: 50, w: 246})
         </div>
       </section>

@@ -2,15 +2,25 @@ $st3: #FFFFFF;
 $st2: #212121;
 $st7: #A7E1FF;
 
+$bpM: 639px;
+$bpT: 1199px;
+$bpL: 1919px;
+
 .cardComment {
   width: calc(233px - 40px);
   height: calc(369px - 40px);
   background-color: $st7;
   padding: 20px;
 
-  @media only screen and (max-width: 640px) {
+  @media only screen and (max-width: $bpT) {
     width: calc(187px - 40px);
     height: calc(429px - 40px);   
+  }
+
+  @media only screen and (max-width: $bpM) {
+    width: calc(100% - 40px);
+    height: auto;
+    margin-bottom: 20px;
   }
 
   .cardComment__top {

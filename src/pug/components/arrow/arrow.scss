@@ -15,9 +15,16 @@ $st5: #FFE68E;
   opacity: 0.8;
   transition: .2s all;
 
+  &.arrow-left,
+  &.arrow-right {
+    width: 64px;
+    height: 64px;
+    background-position: 27px center;
+  }
+
   &.arrow-left {
     transform: rotate(180deg);
-  }
+  }  
 
   &.arrow-up {
     transform: rotate(270deg);
