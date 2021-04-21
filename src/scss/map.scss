@@ -6,41 +6,76 @@ $st5: #FFE68E;
 $st6: #9CA498;
 $st7: #A7E1FF;
 
+$bpM: 639px;
+$bpT: 1199px;
+$bpL: 1919px;
+
 body {
   font-family: 'Roboto', sans-serif;
   background-color: $st7; 
-}
-
-h1 {
-  font-size: 40px;
-  font-weight: 500;
-  line-height: 47px;
-  margin: 0;
 }
 
 .container {
   max-width: 1160px;
   width: 100%;
   margin: 0 auto;
+
+  /* laptop */
+  @media only screen and (max-width: $bpL) {
+    max-width: 1160px;
+  }
+
+  /* tablet */
+  @media only screen and (max-width: $bpT) {
+    max-width: 600px;
+  }
+
+  /* mobile */
+  @media only screen and (max-width: $bpM) {
+    max-width: calc(100% - 20px);
+  }
 }
 
 section {
+  padding: 100px 0;
   display: flex;
   justify-content: center;
   text-align: center;
-  margin-top: 70px;
-  margin-bottom: 70px;
+
+  h2 {
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 47px;
+    letter-spacing: 0em;
+    margin: 0;
+    margin-bottom: 80px;
+  }
 }
 
-.map {
-  height: 945px;
-
-  .container {
-    background-image: url('../../assets/images/bg-map.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
+.no-tablet {
+  @media only screen and (max-width: $bpT) {
+    display: none !important;
   }
+}
+
+.no-mobile {
+  @media only screen and (max-width: $bpM) {
+    display: none !important;
+  }
+}
+
+.only-mobile {
+  display: none !important;
+
+  @media only screen and (max-width: $bpM) {
+    display: block !important;
+  }
+}
+
+
+.map {
+  margin: 0 auto;
+  padding-bottom: 100px;
 
   .temp {
     width: 100%;
@@ -51,19 +86,64 @@ section {
       position: absolute;
 
       &.usa {
-        top: -460px;
+        top: 380px;
         left: 200px;
       }
 
       &.drc {
-        top: -310px;
+        top: 540px;
         left: 520px;
       }
 
       &.china {
-        top: -440px;
+        top: 400px;
         right: 290px;
       }      
     }
+  }
+}
+
+@media screen and (min-width: 641px) and (max-width: 1200px) {
+  .container {
+    width: 100%;
+  }
+
+  .map {
+    overflow-x: hidden;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 321px) and (max-width: 640px) {
+  .container {
+    width: 100%;
+  }
+
+  .content {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .map {
+    overflow-x: hidden;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .container {
+    width: 320px;
+    margin: 0;
+  }
+
+  .content {
+    width: 100%;
+    flex-wrap: wrap;
+    margin: 0;
+  }
+
+  .map {
+    overflow-x: hidden;
+    width: 320px;
   }
 }

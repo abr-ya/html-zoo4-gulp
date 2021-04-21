@@ -6,8 +6,12 @@ block title
   | Map
 
 block content
-  +menuMap({animal: 'panda'})
-  .temp 
-    .text(class='usa') USA
-    .text(class='drc') Eastern <br>DRC
-    .text(class='china') China
+  <div class="content">
+    +menuMap({animal: 'panda'})
+    .temp 
+      .text(class='usa') USA
+      .text(class='drc') Eastern <br>DRC
+      .text(class='china') China
+
+    <img src="../../assets/images/bg-map.png" class="map-img" alt="Map">
+  </div>
